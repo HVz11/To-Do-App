@@ -1,7 +1,7 @@
-import React, { Components } from "react";
+import React, { Component } from "react";
 import Todo from "./Todo";
 
-class TodoList extends Components {
+class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +12,12 @@ class TodoList extends Components {
     const todos = this.state.todos.map((todo) => {
       return <Todo task={todo.task} />;
     });
-    <div>
-      <h1>Todo Lis t!</h1>
-      <ul>{todos}</ul>
-    </div>;
+    return (
+      <div>
+        <h1>Todo List!</h1>
+        <ul>{todos}</ul>
+      </div>
+    );
   }
 }
 
